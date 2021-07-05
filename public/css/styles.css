@@ -1,0 +1,57 @@
+.header {
+    height: 80px;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.header-ttl {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 80px;
+}
+.ttl-link {
+    color: rgb(243, 97, 126);
+    text-decoration: none;
+}
+.header-nav {
+}
+.header-nav-list {
+    display: flex;
+}
+.nav-link {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 80px;
+}
+/***********top **********************/
+.content {
+    text-align: center;
+}
+.top-ttl {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 80px;
+    color: rgb(243, 97, 126);
+    margin-top: 150px;
+}
+.concept {
+    margin: 40px;
+}
+.btn {
+    color: #fff;
+    background-color: #eb6100;
+    border-radius: 50vh;
+    font-size: 26px;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+/********** choice *************************/
+.choose {
+    margin: 30px;
+    line-height: 40px;
+    color: rgb(243, 97, 126);
+}
