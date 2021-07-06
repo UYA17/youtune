@@ -14,10 +14,10 @@
   <script src="js/jquery.range.js"></script>
   <script>
   $('.single-slider').jRange({
-    from: -2.0,
-    to: 2.0,
+    from: 1,
+    to: 100,
     step: 0.5,
-    scale: [-2.0, -1.0, 0.0, 1.0, 2.0],
+    scale: [1, 50, 100],
     format: '%s',
     width: 300,
     showLabels: true,

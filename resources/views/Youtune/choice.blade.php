@@ -5,7 +5,9 @@
 @section('content')
 <div class="content">
   <h2 class="choose">Choose!</h2>
-  <input type="hidden" class="slider-input" value="23" />
+  <div>
+    <input type="hidden" class="single-slider" value="0" />
+  </div>
   <a href="" class="start-btn btn">search!</a>
 
 </div>
