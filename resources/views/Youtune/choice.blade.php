@@ -11,4 +11,5 @@
   <a href="" class="start-btn btn">search!</a>
 
 </div>
+<script src=”{{ mix(‘js/jquery.range.js’) }}”></script>
 @endsection
