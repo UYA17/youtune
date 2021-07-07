@@ -12,4 +12,9 @@
 
 </div>
 <script src="{{mix('js/jquery.range.js')}}"></script>
+<script>
+$(function() { // if document is ready
+  alert('jQuery is ready.')
+});
+</script>
 @endsection
