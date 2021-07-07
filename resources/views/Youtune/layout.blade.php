@@ -12,7 +12,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/jquery.range.js"></script>
-  <script>
+  <!-- <script>
   $('.single-slider').jRange({
     from: 1,
     to: 100,
@@ -23,7 +23,7 @@
     showLabels: true,
     snap: true
   });
-  </script>
+  </script> -->
 </head>
 
 <body>
