@@ -11,20 +11,7 @@
   <link rel="stylesheet" href="css/jquery.range.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="../../js/jquery.range.js"></script>
-  <script src="../../../public/js/jquery.range.js"></script>
-  <!-- <script>
-  $('.single-slider').jRange({
-    from: 1,
-    to: 100,
-    step: 0.5,
-    scale: [1, 50, 100],
-    format: '%s',
-    width: 300,
-    showLabels: true,
-    snap: true
-  });
-  </script> -->
+  <script src="js/jquery.range.js"></script>
 </head>
 
 <body>

@@ -55,3 +55,23 @@
     line-height: 40px;
     color: rgb(243, 97, 126);
 }
+.data-area {
+    width: 100%;
+    height: 450px;
+    margin: 20px auto;
+}
+.genre {
+    font-size: 30px;
+}
+.slider-container {
+    margin: 50px;
+}
+h3 {
+    line-height: 105px;
+    width: 100px;
+    color: rgb(74, 85, 97);
+}
+.tune-color {
+    display: flex;
+    justify-content: center;
+}
