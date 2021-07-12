@@ -230,4 +230,5 @@ return [
 
     ],
 
+    'key_name' => env('GOOGLE_API_KEY'),
 ];
