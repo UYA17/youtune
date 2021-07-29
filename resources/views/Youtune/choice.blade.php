@@ -12,26 +12,28 @@
     </p>
     <div class="tune-color type-1">
       <h3>明るい</h3>
-      <input type="hidden" class="single-slider" value="50" />
+      <input type="hidden" class="single-slider" id="slider1" value="50" />
       <h3>しっとり</h3>
     </div>
     <div class="tune-color type-2">
       <h3>シンプル</h3>
-      <input type="hidden" class="single-slider" value="50" />
+      <input type="hidden" class="single-slider" id="slider2" value="50" />
       <h3>壮大</h3>
     </div>
     <div class="tune-color type-3">
       <h3>甘い</h3>
-      <input type="hidden" class="single-slider" value="50" />
+      <input type="hidden" class="single-slider" id="slider3" value="50" />
       <h3>荒々しい</h3>
     </div>
     <div class="tune-color type-4">
       <h3>軽い</h3>
-      <input type="hidden" class="single-slider" value="50" />
+      <input type="hidden" class="single-slider" id="slider4" value="50" />
       <h3>重い</h3>
     </div>
   </div>
-  <a href="" class="start-btn btn">search!</a>
+  <!-- <a href="" class="start-btn btn"> -->
+  <input type="button" id="searchButton">
+  search!</a>
 
 </div>
 
@@ -51,9 +53,16 @@ $('.single-slider').jRange({
     $(".single-slider").trigger('change');
   }
 });
+let searchButton = document.getElementById('searchButton');
+searchButton.addEventListener('click', buttonClick);
 
-$('.single-slider').change(function(e) {
-  console.log("スライダーが動かされました");
-});
+function buttonClick() {
+  console.log('スライダー１=' + slider1.value + 'スライダー2= ' + slider2.value + 'スライダー3= ' + slider3.value + 'スライダー4= ' +
+    slider4.value);
+}
+
+// $('.single-slider').change(function(e) {
+//   console.log(this.value);
+// });
 </script>
 @endsection

@@ -8,9 +8,9 @@ use Google_Service_YouTube;
 
 class CallYoutubeApi
 {
-  private $key = 'AIzaSyDya9tFGu5q7vw1g-ZeEq6Z54ub147yigk';
   private $client;
   private $youtube;
+  private $key = 'AIzaSyDya9tFGu5q7vw1g-ZeEq6Z54ub147yigk';
 
   public function __construct()
   {
