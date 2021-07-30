@@ -24,8 +24,8 @@ class YoutuneController extends Controller
     public function search(Request $request)
     {
         // スライダー１の値を受け取る
-        $slider1 = $_POST['slider1'];
-
+        // $slider1 = $_POST[$request->slider1];
+        $slider1 = $request->slider1;
 
         $t = new CallYoutubeApi();
         $searchList = $t->searchList("スピッツ");

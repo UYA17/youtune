@@ -7,7 +7,7 @@
   <h2 class="choose">Choose! & Move!</h2>
   <div class="data-area">
     <p class="genre">
-    <form action="YoutuneController.php" method="POST">
+    <form action="YoutuneController.search" method="POST">
       <input type="radio" class="genre" name="genre" value="rock" checked> ROCK
       <input type="radio" class="genre" name="genre" value="pop"> POP
       </p>
