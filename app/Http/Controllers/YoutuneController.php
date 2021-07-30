@@ -19,15 +19,14 @@ class YoutuneController extends Controller
     {
         // config/example.textから
 
-
-
-
-
-
         return view('Youtune.choice');
     }
     public function search(Request $request)
     {
+        // スライダー１の値を受け取る
+        $slider1 = $_POST['slider1'];
+
+
         $t = new CallYoutubeApi();
         $searchList = $t->searchList("スピッツ");
         foreach ($searchList as $result) {
@@ -36,7 +35,7 @@ class YoutuneController extends Controller
             $array[] = array($embed, $videosList[0]['snippet'], $videosList[0]['statistics']);
         }
 
-        return view('Youtune.search', ['youtube' => $array]);
+        return view('Youtune.search', ['youtube' => $array, 'slider_1' => $slider1]);
     }
     public function mypage()
     {
