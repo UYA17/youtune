@@ -30,7 +30,7 @@ class CallYoutubeApi
     $r = $this->youtube->search->listSearch('id', array(
       'q' => $searchWord,
       'maxResults' => 3,
-      'order' => 'viewCount'
+      'order' => 'relevance'
     ));
     return $r->items;
   }

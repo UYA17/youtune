@@ -23,19 +23,53 @@ class YoutuneController extends Controller
     }
     public function search(Request $request)
     {
-        // スライダー１の値を受け取る
-        // $slider1 = $_POST[$request->slider1];
-        $slider1 = $request->slider1;
+        // スライダーの値を受け取る
+        $slider = [
+            $request->slider1, $request->slider2, $request->slider3, $request->slider4
+        ];
+
+        // スライダー１
+        if ($slider[0] < 50) {
+            $keyWord1 = "明るい";
+        } elseif ($slider[0] > 50) {
+            $keyWord1 = "しっとり";
+        } else {
+            $keyWord1 = "";
+        }
+        // スライダー２
+        if ($slider[1] < 50) {
+            $keyWord2 = "シンプル";
+        } elseif ($slider[1] > 50) {
+            $keyWord2 = "壮大";
+        } else {
+            $keyWord2 = "";
+        }
+        // スライダー３
+        if ($slider[2] < 50) {
+            $keyWord3 = "甘い";
+        } elseif ($slider[2] > 50) {
+            $keyWord3 = "荒々しい";
+        } else {
+            $keyWord3 = "";
+        }
+        // スライダー４
+        if ($slider[3] < 50) {
+            $keyWord4 = "軽い";
+        } elseif ($slider[3] > 50) {
+            $keyWord4 = "重い";
+        } else {
+            $keyWord4 = "";
+        }
 
         $t = new CallYoutubeApi();
-        $searchList = $t->searchList("スピッツ");
+        $searchList = $t->searchList($keyWord1, $keyWord2, $keyWord3, $keyWord4);
         foreach ($searchList as $result) {
             $videosList = $t->videosList($result->id->videoId);
             $embed = "https//www.youtube.com/embed/" . $videosList[0]['id'];
             $array[] = array($embed, $videosList[0]['snippet'], $videosList[0]['statistics']);
         }
 
-        return view('Youtune.search', ['youtube' => $array, 'slider_1' => $slider1]);
+        return view('Youtune.search', ['youtube' => $array]);
     }
     public function mypage()
     {

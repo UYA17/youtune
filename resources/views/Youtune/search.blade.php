@@ -15,7 +15,7 @@
     </tr>
   </thead>
   <tbody>
-    <p>{{$slider_1}}</p>
+
 
     @foreach ($youtube as $youtube)
     <tr>

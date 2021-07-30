@@ -8,6 +8,7 @@
   <div class="data-area">
     <p class="genre">
     <form action="YoutuneController.search" method="POST">
+      @csrf
       <input type="radio" class="genre" name="genre" value="rock" checked> ROCK
       <input type="radio" class="genre" name="genre" value="pop"> POP
       </p>
