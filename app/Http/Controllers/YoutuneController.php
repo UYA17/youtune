@@ -30,11 +30,11 @@ class YoutuneController extends Controller
 
         // スライダー１
         if ($slider[0] < 50) {
-            $keyWord1 = "明るい";
+            $keyWord1 = "dance";
         } elseif ($slider[0] > 50) {
-            $keyWord1 = "しっとり";
+            $keyWord1 = "slow";
         } else {
-            $keyWord1 = "";
+            $keyWord1 = "曲";
         }
         // スライダー２
         if ($slider[1] < 50) {
@@ -54,15 +54,16 @@ class YoutuneController extends Controller
         }
         // スライダー４
         if ($slider[3] < 50) {
-            $keyWord4 = "軽い";
+            $keyWord4 = "ハウスミュージック";
         } elseif ($slider[3] > 50) {
-            $keyWord4 = "重い";
+            $keyWord4 = "heavy";
         } else {
             $keyWord4 = "";
         }
 
         $t = new CallYoutubeApi();
         $searchList = $t->searchList($keyWord1, $keyWord2, $keyWord3, $keyWord4);
+        // dd($searchList);
         foreach ($searchList as $result) {
             $videosList = $t->videosList($result->id->videoId);
             $embed = "https//www.youtube.com/embed/" . $videosList[0]['id'];

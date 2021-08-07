@@ -33,9 +33,9 @@
         <h3>重い</h3>
       </div>
   </div>
-  <!-- <a href="" class="start-btn btn"> -->
+
   <input type="submit" id="searchButton" value="search!">
-  search!</a>
+
   </form>
 
 </div>
@@ -46,7 +46,7 @@
 $('.single-slider').jRange({
   from: 0,
   to: 100,
-  step: 15,
+  step: 10,
   scale: [0, 50, 100],
   format: '%s',
   width: '40%',
