@@ -1,10 +1,10 @@
 .header {
     height: 80px;
+    width: 100%;
     background-color: black;
     text-align: center;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
 }
 .header-ttl {
     font-weight: 700;
@@ -16,6 +16,7 @@
     text-decoration: none;
 }
 .header-nav {
+    padding-right: 10px;
 }
 .header-nav-list {
     display: flex;
@@ -27,6 +28,14 @@
     font-size: 24px;
     line-height: 80px;
 }
+/**** レスポンシブ ****/
+@media screen and (max-width: 480px) {
+    .header {
+        height: 150px;
+        flex-direction: column;
+    }
+}
+
 /***********top **********************/
 .content {
     text-align: center;
@@ -69,9 +78,30 @@
 h3 {
     line-height: 105px;
     width: 100px;
+    font-size: 14px;
     color: rgb(74, 85, 97);
 }
 .tune-color {
     display: flex;
     justify-content: center;
+}
+.searchButton {
+    border-radius: 30%;
+    background-color: rgb(255, 240, 36);
+    font-size: 30px;
+    margin-top: 10px;
+}
+.searchButton:hover {
+    background-color: cornsilk;
+    cursor: pointer;
+}
+/********************** search ************/
+iframe {
+    max-width: 100%;
+}
+.table-striped {
+    margin-bottom: 10px;
+}
+.again-btn {
+    margin: 0 10px;
 }

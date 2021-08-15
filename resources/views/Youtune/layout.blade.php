@@ -16,12 +16,12 @@
 
 <body>
   <header class="header">
-    <hi class="header-ttl"><a href="" class="ttl-link">YouTune</a></hi>
+    <hi class="header-ttl"><a href="{{url('/')}}" class="ttl-link">YouTune</a></hi>
     <nav class="header-nav">
       <ul class="header-nav-list">
-        <li class="header-nav-item"><a href="" class="nav-link">My page</a></li>
-        <li class="header-nav-item"><a href="" class="nav-link">Register</a></li>
-        <li class="header-nav-item"><a href="" class="nav-link">Log in</a></li>
+        <!-- <li class="header-nav-item"><a href="" class="nav-link">My page</a></li> -->
+        <li class="header-nav-item"><a href="{{url('/register')}}" class="nav-link">Register</a></li>
+        <li class="header-nav-item"><a href="{{url('/login')}}" class="nav-link">Log in</a></li>
       </ul>
     </nav>
   </header>

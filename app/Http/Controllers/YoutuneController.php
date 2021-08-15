@@ -29,40 +29,40 @@ class YoutuneController extends Controller
         ];
 
         // スライダー１
-        if ($slider[0] < 50) {
-            $keyWord1 = "dance";
+        if ($slider[0] <= 50) {
+            $keyWord1 = "明るい";
         } elseif ($slider[0] > 50) {
-            $keyWord1 = "slow";
+            $keyWord1 = "切ない";
         } else {
-            $keyWord1 = "曲";
+            $keyWord1 = "";
         }
         // スライダー２
         if ($slider[1] < 50) {
-            $keyWord2 = "シンプル";
+            $keyWord2 = "かっこいい";
         } elseif ($slider[1] > 50) {
-            $keyWord2 = "壮大";
+            $keyWord2 = "おしゃれ";
         } else {
             $keyWord2 = "";
         }
         // スライダー３
         if ($slider[2] < 50) {
-            $keyWord3 = "甘い";
+            $keyWord3 = "リラックス";
         } elseif ($slider[2] > 50) {
-            $keyWord3 = "荒々しい";
+            $keyWord3 = "元気";
         } else {
             $keyWord3 = "";
         }
         // スライダー４
         if ($slider[3] < 50) {
-            $keyWord4 = "ハウスミュージック";
+            $keyWord4 = "邦楽";
         } elseif ($slider[3] > 50) {
-            $keyWord4 = "heavy";
+            $keyWord4 = "洋楽";
         } else {
             $keyWord4 = "";
         }
 
         $t = new CallYoutubeApi();
-        $searchList = $t->searchList($keyWord1, $keyWord2, $keyWord3, $keyWord4);
+        $searchList = $t->searchList($keyWord1, $keyWord2, $keyWord3, $keyWord4, "bgm");
         // dd($searchList);
         foreach ($searchList as $result) {
             $videosList = $t->videosList($result->id->videoId);

@@ -20,7 +20,8 @@
     @foreach ($youtube as $youtube)
     <tr>
       <td>
-        <iframe id="ytplayer" type="text/html" width="320" height="180" src={{ $youtube[0] }} frameborder="0"></iframe>
+        <iframe id="ytplayer" type="text/html" width="500" height="180" src={{ $youtube[0] }}
+          frameborder="0">このページはiframe対応ブラウザでご覧ください。</iframe>
       </td>
       <td>{{ $youtube[1]['title'] }}</td>
       <td>{{ $youtube[2]['viewCount'] }}</td>
@@ -31,5 +32,8 @@
   </tbody>
 </table>
 @endif
+<div class="again-btn">
+  <a href="{{url('/choice')}}" class="btn">choose again!</a>
+</div>
 
 @endsection

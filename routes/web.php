@@ -13,9 +13,9 @@ use App\Http\Controllers\YoutuneController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -23,7 +23,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::get('/top', [YoutuneController::class, 'index']);
+Route::get('/', [YoutuneController::class, 'index']);
 Route::get('/choice', [YoutuneController::class, 'choose']);
 Route::get('/search', [YoutuneController::class, 'search']);
 Route::post('YoutuneController.search', [YoutuneController::class, 'search']);
