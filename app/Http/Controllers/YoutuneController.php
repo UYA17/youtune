@@ -17,7 +17,7 @@ class YoutuneController extends Controller
     }
     public function choose()
     {
-        // config/example.textから
+
 
         return view('Youtune.choice');
     }
