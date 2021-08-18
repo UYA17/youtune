@@ -20,8 +20,8 @@
     <nav class="header-nav">
       <ul class="header-nav-list">
         <!-- <li class="header-nav-item"><a href="" class="nav-link">My page</a></li> -->
-        <li class="header-nav-item"><a href="{{url('/register')}}" class="nav-link">Register</a></li>
-        <li class="header-nav-item"><a href="{{url('/login')}}" class="nav-link">Log in</a></li>
+        <li class="header-nav-item"><a href="{{url('/register')}}" class="nav-link">新規登録</a></li>
+        <li class="header-nav-item"><a href="{{url('/login')}}" class="nav-link">ログイン</a></li>
       </ul>
     </nav>
   </header>
