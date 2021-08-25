@@ -66,7 +66,7 @@ class YoutuneController extends Controller
         // dd($searchList);
         foreach ($searchList as $result) {
             $videosList = $t->videosList($result->id->videoId);
-            $embed = "https//www.youtube.com/embed/" . $videosList[0]['id'];
+            $embed = "https//www.youtube.com/" . $videosList[0]['id'];
             $array[] = array($embed, $videosList[0]['snippet'], $videosList[0]['statistics']);
         }
 
