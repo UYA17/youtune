@@ -70,6 +70,7 @@ class YoutuneController extends Controller
             $array[] = array($embed, $videosList[0]['snippet'], $videosList[0]['statistics']);
         }
 
+
         return view('Youtune.search', ['youtube' => $array]);
     }
     public function mypage()

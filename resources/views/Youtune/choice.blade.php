@@ -13,6 +13,7 @@
       <div class="tune-color type-1">
         <h3>明るい</h3>
         <input type="hidden" name="slider1" class="single-slider" id="slider1" value="50" />
+        <p>現在値<span id="value"></span></p>
         <h3>切ない</h3>
       </div>
       <div class="tune-color type-2">
@@ -54,6 +55,9 @@ $('.single-slider').jRange({
     $(".single-slider").trigger('change');
   }
 });
+
+
+
 let searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', buttonClick);
 
@@ -62,8 +66,10 @@ function buttonClick() {
     slider4.value);
 }
 
-// $('.single-slider').change(function(e) {
-//   console.log(this.value);
-// });
+
+
+$('.single-slider').change(function(e) {
+  console.log(this.value);
+});
 </script>
 @endsection

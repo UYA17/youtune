@@ -45,7 +45,6 @@ class CallYoutubeApi
     $r = $this->youtube->videos->listVideos('statistics,snippet', array(
       'id' => $id,
     ));
-
     return $r->items;
   }
 }
