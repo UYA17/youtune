@@ -22,14 +22,18 @@
       <td>
         <iframe id="ytplayer" type="text/html" width="500" height="180" src="{{ $youtube[0]}}"
           frameborder="0">このページはiframe対応ブラウザでご覧ください。</iframe>
-
-
       </td>
+
       <td>{{ $youtube[1]['title'] }}</td>
       <td>{{ $youtube[2]['viewCount'] }}</td>
       <td>{{ $youtube[2]['likeCount'] }}</td>
       <td>{{ $youtube[2]['dislikeCount'] }}</td>
-      <td><a href="{{ $youtube[0] }}">{{ $youtube[0] }}</a></td>
+      <td>
+        <form action="outsidePage" method="POST">
+          @csrf
+          <input type="submit" name="videoURL" 　value="{{ $youtube[0] }}">
+        </form>
+      </td>
     </tr>
     @endforeach
   </tbody>

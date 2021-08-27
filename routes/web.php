@@ -26,5 +26,6 @@ require __DIR__ . '/auth.php';
 Route::get('/', [YoutuneController::class, 'index']);
 Route::get('/choice', [YoutuneController::class, 'choose']);
 Route::get('/search', [YoutuneController::class, 'search']);
+Route::get('YoutuneController.search', [YoutuneController::class, 'outsidePage']);
 Route::post('YoutuneController.search', [YoutuneController::class, 'search']);
 Route::get('/mypage', [YoutuneController::class, 'mypage']);

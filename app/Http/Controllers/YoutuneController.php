@@ -9,6 +9,8 @@ use Google_Client;
 use Google_Service_YouTube;
 
 
+
+
 class YoutuneController extends Controller
 {
     public function index()
@@ -63,16 +65,21 @@ class YoutuneController extends Controller
 
         $t = new CallYoutubeApi();
         $searchList = $t->searchList($keyWord1, $keyWord2, $keyWord3, $keyWord4, "bgm");
-        // dd($searchList);
         foreach ($searchList as $result) {
             $videosList = $t->videosList($result->id->videoId);
             $embed = "https//www.youtube.com/" . $videosList[0]['id'];
             $array[] = array($embed, $videosList[0]['snippet'], $videosList[0]['statistics']);
         }
 
-
         return view('Youtune.search', ['youtube' => $array]);
     }
+
+    public function outsidePage(Request $request)
+    {
+        $outside = $request->videoURL;
+        return redirect()->away($outside);
+    }
+
     public function mypage()
     {
         return view('Youtune.mypage');
