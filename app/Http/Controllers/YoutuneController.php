@@ -77,6 +77,7 @@ class YoutuneController extends Controller
     public function outsidePage(Request $request)
     {
         $outside = $request->videoURL;
+        dd($outside);
         return redirect()->away($outside);
     }
 
