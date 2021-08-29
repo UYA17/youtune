@@ -31,7 +31,7 @@
       <td>
         <form action="YoutuneController/search" method="POST">
           @csrf
-          <input type="hidden" name="videoURL" 　value="{{ $youtube[0] }}">
+          <input type="hidden" name="videoURL" value="{{ $youtube[0] }}">
           <input type="submit">
         </form>
       </td>
