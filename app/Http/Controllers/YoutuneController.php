@@ -67,7 +67,7 @@ class YoutuneController extends Controller
         $searchList = $t->searchList($keyWord1, $keyWord2, $keyWord3, $keyWord4, "bgm");
         foreach ($searchList as $result) {
             $videosList = $t->videosList($result->id->videoId);
-            $embed = "https//www.youtube.com/" . $videosList[0]['id'];
+            $embed = "https://www.youtube.com/watch?v=" . $videosList[0]['id'];
             $array[] = array($embed, $videosList[0]['snippet'], $videosList[0]['statistics']);
         }
 
@@ -77,7 +77,7 @@ class YoutuneController extends Controller
     public function outsidePage(Request $request)
     {
         $outside = $request->videoURL;
-        dd($outside);
+
         return redirect()->away($outside);
     }
 

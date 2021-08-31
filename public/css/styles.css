@@ -96,12 +96,38 @@ h3 {
     cursor: pointer;
 }
 /********************** search ************/
-iframe {
-    max-width: 100%;
-}
+
 .table-striped {
     margin-bottom: 10px;
 }
 .again-btn {
     margin: 0 10px;
+}
+.access {
+    border-radius: 30%;
+    background-color: rgb(255, 240, 36);
+    font-size: 30px;
+    margin-top: 10px;
+}
+.access:hover {
+    background-color: cornsilk;
+    cursor: pointer;
+}
+.table-striped {
+    margin: 10px;
+}
+.category_table {
+    height: 30px;
+}
+tr {
+    margin: 10px;
+}
+.title_table {
+    width: 50%;
+}
+.again-btn {
+    margin-top: 50px;
+}
+.list {
+    height: 70px;
 }

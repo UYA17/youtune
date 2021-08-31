@@ -6,9 +6,8 @@
 @if (count($youtube) > 0)
 <table class="table table-striped">
   <thead>
-    <tr>
-      <th>image</th>
-      <th>title</th>
+    <tr class="category_table">
+      <th class="title_table">title</th>
       <th>viewCount</th>
       <th>likeCount</th>
       <th>dislikeCount</th>
@@ -18,12 +17,7 @@
 
 
     @foreach ($youtube as $youtube)
-    <tr>
-      <td>
-        <iframe id="ytplayer" type="text/html" width="500" height="180" src="{{ $youtube[0]}}"
-          frameborder="0">このページはiframe対応ブラウザでご覧ください。</iframe>
-      </td>
-
+    <tr class="list">
       <td>{{ $youtube[1]['title'] }}</td>
       <td>{{ $youtube[2]['viewCount'] }}</td>
       <td>{{ $youtube[2]['likeCount'] }}</td>
@@ -32,7 +26,7 @@
         <form action="YoutuneController/search" method="POST">
           @csrf
           <input type="hidden" name="videoURL" value="{{ $youtube[0] }}">
-          <input type="submit">
+          <input type="submit" class="access" value="Listen!">
         </form>
       </td>
     </tr>
